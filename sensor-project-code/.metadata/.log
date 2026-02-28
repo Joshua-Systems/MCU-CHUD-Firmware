@@ -1,0 +1,23 @@
+!SESSION 2026-02-28 17:37:12.308 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_NZ
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-02-28 17:37:24.318
+!MESSAGE Log4j2 initialized with config file C:\repo\MCU-CHUD-Firmware\sensor-project-code\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-02-28 17:37:26.651
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-02-28 17:37:27.443
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM1
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-02-28 17:37:27.444
+!MESSAGE port: COM1
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-02-28 17:37:54.333
+!MESSAGE Indexed 'sensor_project_dummy_code' (867 sources, 267 headers) in 7.28 sec: 39,405 declarations; 251,769 references; 68 unresolved inclusions; 714 syntax errors; 1,724 unresolved names (0.59%)
