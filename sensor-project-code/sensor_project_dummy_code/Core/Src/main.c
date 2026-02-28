@@ -206,10 +206,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOE, ERROR_LED_Pin|GNSS_LED_Pin|CAN_LED_Pin|HB_LED_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, ACCL_CS_Pin|IMU_CS_Pin|BMP_CS_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SD_CS_GPIO_Port, SD_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, ACCL_CS_Pin|IMU_CS_Pin|BMP_CS_Pin|SC_CS_2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : ERROR_LED_Pin GNSS_LED_Pin CAN_LED_Pin HB_LED_Pin */
   GPIO_InitStruct.Pin = ERROR_LED_Pin|GNSS_LED_Pin|CAN_LED_Pin|HB_LED_Pin;
@@ -226,8 +223,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : ACCL_CS_Pin IMU_CS_Pin BMP_CS_Pin */
-  GPIO_InitStruct.Pin = ACCL_CS_Pin|IMU_CS_Pin|BMP_CS_Pin;
+  /*Configure GPIO pins : ACCL_CS_Pin IMU_CS_Pin BMP_CS_Pin SC_CS_2_Pin */
+  GPIO_InitStruct.Pin = ACCL_CS_Pin|IMU_CS_Pin|BMP_CS_Pin|SC_CS_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -240,13 +237,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   GPIO_InitStruct.Alternate = GPIO_AF5_SPI1;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : SD_CS_Pin */
-  GPIO_InitStruct.Pin = SD_CS_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(SD_CS_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB13 PB14 PB15 */
   GPIO_InitStruct.Pin = GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;

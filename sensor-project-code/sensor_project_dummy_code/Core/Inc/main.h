@@ -79,8 +79,8 @@ void Error_Handler(void);
 #define IMU_INT1_GPIO_Port GPIOC
 #define IMU_INT2_Pin GPIO_PIN_5
 #define IMU_INT2_GPIO_Port GPIOC
-#define SD_CS_Pin GPIO_PIN_12
-#define SD_CS_GPIO_Port GPIOB
+#define SC_CS_2_Pin GPIO_PIN_8
+#define SC_CS_2_GPIO_Port GPIOA
 #define HB_LED_Pin GPIO_PIN_1
 #define HB_LED_GPIO_Port GPIOE
 
